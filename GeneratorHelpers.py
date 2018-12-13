@@ -18,12 +18,25 @@ class GeneratorHelpers(object):
 
     def quick_char(self):
         print("Quick Charachter")
-        print(rand.choice(self.charTraits))
-        print(rand.choice(self.mannerisms))
-        print(rand.choice(self.firstnames))
-        print(rand.choice(self.lastnames))
-        print(rand.choice(self.nouns))
+        self.charTraits = (rand.choice(self.charTraits))
+        self.mannerisms = (rand.choice(self.mannerisms))
+        self.firstnames = (rand.choice(self.firstnames))
+        self.lastnames = (rand.choice(self.lastnames))
+        self.nouns = (rand.choice(self.nouns))
+        return self
 
+
+    def create_char_ob(self, howmany):
+        char_obs = []
+        for numchar in range(howmany):
+            nb = npc_blank()
+            nb.charTraits = (rand.choice(self.charTraits))
+            nb.mannerisms = (rand.choice(self.mannerisms))
+            nb.firstnames = (rand.choice(self.firstnames))
+            nb.lastnames = (rand.choice(self.lastnames))
+            nb.nouns = (rand.choice(self.nouns))
+            char_obs.append(nb)
+        return char_obs
 
 
     def search_spelllist(self, searchterms):
@@ -70,13 +83,23 @@ class GeneratorHelpers(object):
 
         for rk in rock:
             print(rk['name'])
-            print(rk['description'])
-            print(rk['level'])
-            print(rk['school'])
+            #print(rk['description'])
+            #print(rk['level'])
+            #print(rk['school'])
 
 
 
+class npc_blank(object):
+    def __init__(self):
+        self.name = ""
+        self.charTraits = ''
+        self.mannerisms = ''
+        self.firstnames = ''
+        self.lastnames = ''
+        self.nouns = ''
 
-spellpass = {'school': "transmutation", 'spell_level': '4', 'search_terms': 'Spider', 'multi_search': False}
-gh = GeneratorHelpers()
-gh.search_spelllist(spellpass)
+
+
+#spellpass = {'school': "necromancy", 'spell_level': None, 'search_terms': None, 'multi_search': True}
+#gh = GeneratorHelpers()
+#gh.search_spelllist(spellpass)

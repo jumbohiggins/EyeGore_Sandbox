@@ -10,12 +10,15 @@ class CharScrape(object):
 
     def CharScrape(self, url):
 
-        req = requests.get(url)
-
-        data = req.json()
+        #print(1)
+        #print("Fatty")
+        #print(url)
+        data = requests.get(url).json()
+        #print(3)
         binary = json.dumps(data)
+        #print(4)
         output = json.loads(binary)
-
+        #print(5)
         return(output)
 
 
@@ -29,3 +32,5 @@ class CharScrape(object):
             f.write(mexxy)
 
 
+#cs = CharScrape()
+#ven = cs.CharScrape("https://www.dndbeyond.com/profile/Venificus/characters/2113653/json")
