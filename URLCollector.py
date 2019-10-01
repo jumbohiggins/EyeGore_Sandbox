@@ -21,6 +21,7 @@ class UrlCollect(object):
         self.urls_file = os.path.join(__location__,self.helo.get_campain(__location__) + '__URLS.UFS')
         path = self.helo.get_campain(__location__) + '__URLS.UFS'
         pysonob = helo.load_picklefile(path)
+        print(pysonob)
         return pysonob
 
     def createUrlFile(self, path, data):
@@ -43,15 +44,21 @@ class UrlCollect(object):
         for each in char_list:
             print(each.name, each.url)
         self.createUrlFile(self.urls_file, char_list)
+        print(self.urls_file)
 
     def getUrls(self):
         pysonob = self.CheckCurrentUrls()
         for each in pysonob:
             print(each.name)
 
+    def live_Pull(self):
+        pysonob = self.CheckCurrentUrls()
+        for each in pysonob:
+            print(each.name)
+
 
 UC = UrlCollect()
-UC.addUrls(["https://www.dndbeyond.com/character/2113653/json", "https://www.dndbeyond.com/character/4741434/json"])
+UC.addUrls(["https://www.dndbeyond.com/character/4741434/json", "https://www.dndbeyond.com/character/15473396/json", "https://www.dndbeyond.com/character/10428007/json", "https://www.dndbeyond.com/character/15636899/json", "https://www.dndbeyond.com/character/10648918/json"])
 #UC.getUrls()
 
 #cs = CharScrapper.CharScrape()

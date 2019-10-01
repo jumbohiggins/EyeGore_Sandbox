@@ -160,3 +160,50 @@ class Helpers(object):
             return 4
         if baseint < 22:
             return 5
+
+
+    def get_player_level(self, xpamount):
+        if xpamount == 0:
+            return 1
+        if xpamount == 300:
+            return 2
+        if xpamount == 900:
+            return 3
+        if xpamount == 2700:
+            return 4
+        if xpamount == 6500:
+            return 5
+        if xpamount == 14000:
+            return 6
+        if xpamount == 23000:
+            return 7
+        if xpamount == 34000:
+            return 8
+        if xpamount == 48000:
+            return 9
+        if xpamount == 64000:
+            return 10
+        if xpamount == 85000:
+            return 11
+        if xpamount == 100000:
+            return 12
+        if xpamount == 120000:
+            return 13
+        if xpamount == 140000:
+            return 14
+        if xpamount == 165000:
+            return 15
+        if xpamount == 195000:
+            return 16
+        if xpamount == 225000:
+            return 17
+        if xpamount == 265000:
+            return 18
+        if xpamount == 305000:
+            return 19
+        if xpamount == 355000:
+            return 20
+
+
+    #def tag_search(self, tag):
+

@@ -22,6 +22,8 @@ class CharClass(object):
         self.proficency = helo.get_proficency_level(charjson["classes"][0]["level"])
         self.basehitpoints = charjson["baseHitPoints"]
         self.overridehitpoints = charjson["overrideHitPoints"]
+        self.charxp = charjson["currentXp"]
+        self.removedhp = charjson["removedHitPoints"]
         self.race = charjson["race"]["fullName"]
         self.gp = charjson["currencies"]["gp"]
         self.sp = charjson["currencies"]["sp"]

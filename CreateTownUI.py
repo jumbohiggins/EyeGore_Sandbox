@@ -50,7 +50,6 @@ class Form(QDialog):
         TG.PopulationSize = self.PopulationSize.text()
         TG.GenerateMerchants = self.GenerateMerchants.isChecked()
         TG.Npc_obj = GH.create_char_ob(gencharsnum)
-
         HP.save_out_picklefile(TG, "TownData.TD")
 
 
