@@ -205,5 +205,81 @@ class Helpers(object):
             return 20
 
 
+    def get_conditions(self, conlst):
+        retlist = []
+        for con in conlst:
+            #print(con)
+            if con['id'] == 1:
+                retlist.append("Blinded")
+            if con['id'] == 2:
+                retlist.append("Charmed")
+            if con['id'] == 3:
+                retlist.append("Deafened")
+            if con['id'] == 4:
+                retlist.append({"Exhaustion Level : ", con['level']})
+            if con['id'] == 5:
+                retlist.append("Frightened")
+            if con['id'] == 6:
+                retlist.append("Grappled")
+            if con['id'] == 7:
+                retlist.append("Incapacitated")
+            if con['id'] == 8:
+                retlist.append("Invisible")
+            if con['id'] == 9:
+                retlist.append("Paralyzed")
+            if con['id'] == 10:
+                retlist.append("Petrified")
+            if con['id'] == 11:
+                retlist.append("Poisoned")
+            if con['id'] == 12:
+                retlist.append("Prone")
+            if con['id'] == 13:
+                retlist.append("Restrained")
+            if con['id'] == 14:
+                retlist.append("Stunned")
+            if con['id'] == 15:
+                retlist.append("Unconscious")
+        return retlist
+
+    def get_resistances(self, reslst):
+        retreslist = []
+        for res in reslst:
+            if res['id'] == 1:
+                retreslist.append("")
+            if res['id'] == 2:
+                retreslist.append("")
+            if res['id'] == 3:
+                retreslist.append("")
+            if res['id'] == 4:
+                retreslist.append("")
+            if res['id'] == 5:
+                retreslist.append("")
+            if res['id'] == 6:
+                retreslist.append("")
+            if res['id'] == 7:
+                retreslist.append("")
+            if res['id'] == 8:
+                retreslist.append("")
+            if res['id'] == 9:
+                retreslist.append("")
+            if res['id'] == 10:
+                retreslist.append("")
+            if res['id'] == 11:
+                retreslist.append("")
+            if res['id'] == 12:
+                retreslist.append("")
+            if res['id'] == 13:
+                retreslist.append("")
+            if res['id'] == 14:
+                retreslist.append("")
+            if res['id'] == 15:
+                retreslist.append("")
+            if res['id'] == 16:
+                retreslist.append("")
+            if res['id'] == 17:
+                retreslist.append("")
+            if res['id'] == 18:
+                retreslist.append("")
+
     #def tag_search(self, tag):
 

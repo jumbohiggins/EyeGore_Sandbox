@@ -42,7 +42,10 @@ class CharScrape(object):
         soup = BeautifulSoup(response.data, "html.parser")
         site_json = json.loads(soup.text)
         current_hp = int(site_json['baseHitPoints']) + hp.get_mod(int(site_json["stats"][2]["value"])) * hp.get_player_level(int(site_json['currentXp'])) - int(site_json['removedHitPoints'])
-        print(current_hp)
+        cons = hp.get_conditions(site_json['conditions'])
+        #print(cons)
+        print(site_json['customDefenseAdjustments'])
+        #print(current_hp, site_json['name'])
 
 
 numslist = 4741434, 15473396, 10428007, 15636899, 10648918
